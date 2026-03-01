@@ -1,0 +1,19 @@
+# If you prefer using .env files, they should not be checked in.
+.env
+.env.*
+!.env.example
+
+# Binaries
+/alat-cli
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+
+# Output of the go coverage tool
+*.out
+config.json\nconfig.yaml
