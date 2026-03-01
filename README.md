@@ -1,6 +1,6 @@
 # AlatPay CLI & Mock Server Toolkit
 
-A powerful, developer-centric toolkit for interacting with Alhaji's AlatPay API, managing webhooks, simulating server environments, and providing a clean local developer experience.
+A powerful, developer-centric toolkit for interacting with AlatPay servers, managing webhooks, simulating server environments, and providing a clean local developer experience.
 
 This repository contains two primary components:
 1. `alatpay`: The fully-featured locally-installable CLI tool.
