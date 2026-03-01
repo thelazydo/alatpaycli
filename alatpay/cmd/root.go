@@ -12,9 +12,9 @@ var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "alat",
+	Use:   "alatpay",
 	Short: "A CLI tool for interacting with AlatPay",
-	Long: `alat is a CLI tool that provides utilities for working with 
+	Long: `alatpay is a CLI tool that provides utilities for working with 
 the AlatPay payment gateway. It can spin up local webhook listeners, 
 authenticate tools, and manage basic transactions.`,
 	// Uncomment the following line if your bare application

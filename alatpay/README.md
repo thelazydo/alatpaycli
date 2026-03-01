@@ -1,4 +1,4 @@
-# AlatPay CLI (`alat`)
+# AlatPay CLI (`alatpay`)
 
 A powerful Command Line Interface built in Go for testing, managing, and interacting with the AlatPay payment gateway APIs. Designed for developers integrating AlatPay, this CLI allows you to spoof webhooks, spin up local inspection web servers, tail logs, and securely test transactions.
 
@@ -11,7 +11,7 @@ git clone <this-repo>
 cd alatpay
 go build -o alatpay .
 # Move to your bin path, for example:
-# mv alat /usr/local/bin/
+# mv alatpay /usr/local/bin/
 ```
 
 ## Global Configuration & Authentication
@@ -32,7 +32,7 @@ Enter AlatPay Webhook Secret (optional, for signature verification):
 
 ## Core Commands
 
-### 1. Webhook Listener & Dashboard (`alat listen`)
+### 1. Webhook Listener & Dashboard (`alatpay listen`)
 Intersects webhooks sent from AlatPay or fired via the CLI trigger command.
 
 ```bash

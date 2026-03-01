@@ -2,11 +2,10 @@
 
 A powerful, developer-centric toolkit for interacting with AlatPay servers, managing webhooks, simulating server environments, and providing a clean local developer experience.
 
-<img src='./sequence.png' alt="sequence"/>
-
 This repository contains two primary components:
 1. `alatpay`: The fully-featured locally-installable CLI tool.
 2. `alatpay-mock-server`: A mock WebSocket relay server for testing and receiving webhook events locally.
+3. `backend`: A backend server for testing and receiving webhook from alatpay cli.
 
 ---
 

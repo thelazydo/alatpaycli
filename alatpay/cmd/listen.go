@@ -1,6 +1,9 @@
 package cmd
 
 import (
+	"alatpay/config"
+	"alatpay/internal/store"
+	"alatpay/ui"
 	"bytes"
 	"crypto/hmac"
 	"crypto/rand"
@@ -15,10 +18,6 @@ import (
 	"strings"
 	"syscall"
 	"time"
-
-	"alatpay/config"
-	"alatpay/internal/store"
-	"alatpay/ui"
 
 	"github.com/fatih/color"
 	"github.com/gorilla/websocket"
@@ -66,7 +65,7 @@ can forward webhooks to another local service, and spin up a Web UI.`,
 		logPath := home + "/.alatpay/events.log"
 		logFile, err := os.OpenFile(logPath, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0o666)
 		if err == nil {
-			logFile.WriteString(fmt.Sprintf("[%s] ==== Alat CLI Listener Started ====\n", time.Now().Format("2006-01-02 15:04:05")))
+			logFile.WriteString(fmt.Sprintf("[%s] ==== Alatpay CLI Listener Started ====\n", time.Now().Format("2006-01-02 15:04:05")))
 		} else {
 			fmt.Printf("Warning: Could not open %s for logging\n", logPath)
 		}
@@ -238,7 +237,7 @@ can forward webhooks to another local service, and spin up a Web UI.`,
 			uiServer.Close()
 		}
 		if logFile != nil {
-			logFile.WriteString(fmt.Sprintf("[%s] ==== Alat CLI Listener Stopped ====\n\n", time.Now().Format("2006-01-02 15:04:05")))
+			logFile.WriteString(fmt.Sprintf("[%s] ==== Alatpay CLI Listener Stopped ====\n\n", time.Now().Format("2006-01-02 15:04:05")))
 			logFile.Close()
 		}
 	},

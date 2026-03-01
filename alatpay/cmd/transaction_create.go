@@ -39,7 +39,7 @@ using AlatPay's Bank Transfer API.`,
 			"orderId":    orderID,
 			"customer": map[string]interface{}{
 				"email":     email,
-				"firstName": "Alat",
+				"firstName": "AlatPay",
 				"lastName":  "CLI",
 				"phone":     "08000000000",
 			},

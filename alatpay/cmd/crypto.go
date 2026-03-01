@@ -1,21 +1,22 @@
 package cmd
 
 import (
+	"alatpay/config"
+	"alatpay/internal/crypto"
 	"crypto/hmac"
 	"crypto/sha512"
 	"encoding/hex"
 	"fmt"
 	"strings"
 
-	"alatpay/config"
-	"alatpay/internal/crypto"
-
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 )
 
-var cryptoKey string
-var cryptoIV string
+var (
+	cryptoKey string
+	cryptoIV  string
+)
 
 // cryptoCmd represents the utility wrapper for testing payload encryption
 var cryptoCmd = &cobra.Command{
@@ -64,7 +65,7 @@ var verifyCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		cfg, err := config.Load()
 		if err != nil || cfg.WebhookSecret == "" {
-			color.Red("Error: Please run 'alat auth' to set your webhook secret first before verifying signatures.")
+			color.Red("Error: Please run 'alatpay auth' to set your webhook secret first before verifying signatures.")
 			return
 		}
 
